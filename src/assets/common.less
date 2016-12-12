@@ -1,0 +1,61 @@
+@import "variables";
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.md-button:not([disabled]) {
+  &.md-primary {
+    color: @color-primary;
+  }
+
+  &.md-warn {
+    color: @color-warn;
+  }
+
+  &.md-danger {
+    color: @color-danger;
+  }
+
+  &.md-info {
+    color: @color-info;
+  }
+}
+
+a:not(.md-button) {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}

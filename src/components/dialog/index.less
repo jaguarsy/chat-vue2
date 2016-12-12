@@ -1,0 +1,120 @@
+.dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //定义动画
+  &.dialogAnimate-enter-active,
+  &.dialogAnimate-leave-active {
+    transition: opacity 0.3s ease;
+  }
+
+  &.dialogAnimate-enter,
+  &.dialogAnimate-leave-active {
+    opacity: 0;
+
+    .dialog {
+      transform: scale(1.1);
+    }
+  }
+
+  .dialog {
+    display: block;
+    width: 85%;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all .3s ease;
+
+    .dialog-title,
+    .dialog-body {
+      border-bottom: solid 1px #eee;
+    }
+
+    .dialog-title {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bolder;
+      text-align: center;
+    }
+
+    .dialog-body {
+      padding: 20px;
+
+      .form-group:last-child,
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .dialog-footer {
+      .md-button {
+        margin: 0;
+        padding: 2px 0px;
+      }
+
+      &:after {
+        display: table;
+        content: '';
+        clear: both;
+      }
+
+      .btn {
+        border: none;
+        float: left;
+        padding: 8px 0;
+        margin: 0;
+        outline: none;
+        appearance: none;
+        border-radius: 0;
+        box-shadow: none;
+        line-height: 28px;
+        width: 100%;
+        font-size: 12px;
+        background: transparent;
+        text-align: center;
+
+        &.btn-primary {
+          color: #337ab7;
+        }
+      }
+
+      .col-1 {
+        width: 100%;
+      }
+
+      .col-2 {
+        float: left;
+        width: 50%;
+      }
+
+      .col-3 {
+        float: left;
+        width: 33.3333333333%;
+      }
+
+      .col-2, .col-3 {
+        &:not(:last-child) {
+          border-right: solid 1px #eee;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .dialog-container {
+    .dialog {
+      max-width: 350px;
+    }
+  }
+}

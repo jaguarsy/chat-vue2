@@ -1,0 +1,72 @@
+.message-list {
+  color: #666;
+
+  .message-container {
+    margin-bottom: 6px;
+
+    .head-photo {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin: 0 8px 0 0;
+    }
+
+    .message {
+      float: left;
+      max-width: 80%;
+      padding: 8px;
+      background: #c2e0ea;
+      border-radius: 3px;
+
+      .title {
+        color: green;
+        margin: 0 0 3px 0;
+
+        .name,
+        .splitter,
+        .time {
+          float: left;
+        }
+
+        .splitter {
+          margin: 0 4px;
+        }
+      }
+
+      .content {
+        display: inline-block;
+        font-size: 14px;
+        word-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+        font-weight: 500;
+
+        small {
+          font-size: 12px;
+          color: #888;
+        }
+      }
+    }
+
+    &.self {
+      .head-photo {
+        float: right;
+        margin: 0 0 0 8px;
+      }
+
+      .message {
+        float: right;
+        background: #c5eac2;
+
+        .title {
+          .name,
+          .splitter,
+          .time {
+            float: right;
+          }
+        }
+      }
+    }
+
+  }
+}
